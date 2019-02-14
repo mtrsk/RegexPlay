@@ -1,0 +1,5 @@
+.stack-work/
+regexplay.cabal
+*~
+# Extra
+.direnv
