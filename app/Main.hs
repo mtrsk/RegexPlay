@@ -1,6 +1,10 @@
 module Main where
 
-import Lib
+import           RegexSimple
+import           RegexWeighted
 
 main :: IO ()
-main = putStrLn "Hello"
+main = do
+  let as = Alt (Sym 'a') (Rep (Sym 'b'))
+  let result = acceptW (weighted as) "a" :: Int
+  print result
