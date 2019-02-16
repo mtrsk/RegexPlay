@@ -8,6 +8,12 @@ instance Semiring Bool where
   (<+>) = (||)
   (<.>) = (&&)
 
+instance Semiring Int where
+  zero = 0
+  one = 1
+  (<+>) = (+)
+  (<.>) = (*)
+
 data Reg
   = Eps
   | Sym Char
