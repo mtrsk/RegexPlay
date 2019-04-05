@@ -4,18 +4,6 @@ import           RegexSimple
 import           Semiring
 import           Utils
 
-instance Semiring Bool where
-  zero = False
-  one = True
-  (<+>) = (||)
-  (<.>) = (&&)
-
-instance Semiring Int where
-  zero = 0
-  one = 1
-  (<+>) = (+)
-  (<.>) = (*)
-
 data RegW c s
   = EpsW
   | SymW (c -> s)
