@@ -20,3 +20,8 @@ instance Semiring Int where
   one = 1
   (<+>) = (+)
   (<.>) = (*)
+
+class Semiring s =>
+      SemiringI s
+  where
+  index :: Int -> s
